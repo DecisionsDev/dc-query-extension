@@ -1,0 +1,4 @@
+
+bql.RuleArtifact.isLocked()#sentence.navigation = {this} is locked
+bql.Ruleflow.isLocked()#sentence.navigation = {this} is locked
+bql.VariableSet.isLocked()#sentence.navigation = {this} is locked

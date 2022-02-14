@@ -1,0 +1,19 @@
+package bql;
+
+public class RuleArtifact extends bql.PackageElement
+{
+	public boolean isLocked()
+	   property categories "teamserver";
+}
+
+public class Ruleflow extends bql.PackageElement
+{
+	public boolean isLocked()
+	   property categories "teamserver";
+}
+
+public class VariableSet extends bql.PackageElement
+{
+	public boolean isLocked()
+	   property categories "teamserver";
+}
