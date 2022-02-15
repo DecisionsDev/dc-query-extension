@@ -1,25 +1,27 @@
 # Decision Center query extension
  
-This sample provides a query extension enabling to find the locked rule artifacts (rules, Decision Tables,...), ruleflows and variablesets.
+This sample makes it possible to write a query to find the locked rule artifacts (rules, Decision Tables,...), ruleflows or variable sets.
 
 ## How to write such queries
-
-*Find* all rule artifacts
+```java
+Find all rule artifacts
     such that each rule artifact is locked
-
-*Find* all ruleflows
+```
+```java
+Find all ruleflows
     such that each ruleflow is locked
-
-*Find* all rule variable sets
+```
+```java
+Find all rule variable sets
     such that each variable set is locked
-
+```
 ## How does it work
 
-The new phrases "is locked" (for rule artifacts, ruleflows and variable sets) are declared thanks to the files:
+New sentences `'element' is locked` (applying to rule artifacts, ruleflows and variable sets) are declared in the files:
 - [ext.bom](find-locked-ruleartifacts-query-extension/ilog/rules/teamserver/ext.bom) 
 - [ext_en_US.voc](find-locked-ruleartifacts-query-extension/ilog/rules/teamserver/ext_en_US.voc) 
 
-The implementation is provided by the classes:
+The implementation classes are:
 - [RuleArtifactQueryExtension](find-locked-ruleartifacts-query-extension/src/ilog/rules/teamserver/RuleArtifactQueryExtension.java) 
 - [RuleflowQueryExtension](find-locked-ruleartifacts-query-extension/src/ilog/rules/teamserver/RuleflowQueryExtension.java) 
 - [VariableSetQueryExtension](find-locked-ruleartifacts-query-extension/src/ilog/rules/teamserver/VariableSetQueryExtension.java) 
@@ -31,7 +33,7 @@ The integration of the query extension is done thanks to the file:
 - [teamserver/bql/preferences.properties](find-locked-ruleartifacts-query-extension/teamserver/bql/preferences.properties) 
 
 
-For more, refer to the documentation set: 
+You can read about creating and integrating a query extension in the documentation set: 
 - [Creating query extensions](https://www.ibm.com/docs/en/odm/8.10?topic=queries-creating-query-extensions)
 - [Integrating query extensions](https://www.ibm.com/docs/en/odm/8.10?topic=extensions-integrating-query)
 
