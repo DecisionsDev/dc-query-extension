@@ -1,4 +1,6 @@
-/.settings/
+.settings/
 .metadata/
+find-locked-ruleartifacts-query-extension/.settings
+find-locked-ruleartifacts-query-extension/target
 *.class
-query-extension.jar
+*.jar

@@ -53,15 +53,12 @@ public class RuleArtifactQueryExtension {
 			if (locked && LOGGER.isLoggable(Level.FINE)) {
 				String  type       = ((IlrElementHandle)    modelElement).getType();
 				Integer id         = ((IlrIdentifiedObject) modelElement).getId();
-				Integer baselineId = ((IlrIdentifiedObject) IlrSessionHelperEx.getWorkingBaseline (session, (IlrElementHandle) modelElement)).getId();
 
 				LOGGER.fine (new StringBuilder(((IlrModelElement) modelElement).getName())
 								.append(" (type=")
 								.append(type)
 								.append(", id=")
 								.append(id)
-								.append(", branch=")
-								.append(baselineId)
 								.append(") is locked")
 								.toString());
 			}
