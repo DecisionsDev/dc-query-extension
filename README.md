@@ -1,3 +1,6 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/ODMDev/dc-query-extension)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 # Decision Center query extension
  
 This sample makes it possible to write a query to find the locked rule artifacts (rules, Decision Tables,...), ruleflows or variable sets.
@@ -41,9 +44,17 @@ You can read about creating and integrating a query extension in the documentati
 The sample can be built and run with IBM Operational Decision Manager, versions 8.9.x, 8.10.x or 8.11.
 
 ## Building
-To build the source code, type the maven command:
+### using Maven
+* Edit the [pom.xml](find-locked-ruleartifacts-query-extension/pom.xml) file to define the dependency to Decision Center Jars and the URL of your remote repository
+* Run the maven command:
 ```
 mvn clean install
+```
+### using Ant
+* Edit the [build.properties](find-locked-ruleartifacts-query-extension/build.properties) file to set the `odm.dir` property to your ODM install directory.
+* Run the default Ant target to build `query-extension.jar`
+```
+ant -f build.xml
 ```
 ## Running
 To run the sample, add the JAR generated in the `target` directory to decisioncenter.war (in WEB-INF/lib).
